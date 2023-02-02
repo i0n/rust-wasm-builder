@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 NAME := rust-wasm-builder
 CONTAINER_NAME := i0nw/${NAME}
-RUST_VERSION := 1.66
+RUST_VERSION := 1.67
 
 docker-build:
 	docker build . -t ${CONTAINER_NAME}:latest
