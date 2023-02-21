@@ -3,6 +3,9 @@ NAME := rust-wasm-builder
 CONTAINER_NAME := i0nw/${NAME}
 RUST_VERSION := 1.67.1
 
+print-version:
+	@echo $(RUST_VERSION)
+
 docker-build:
 	docker build . -t ${CONTAINER_NAME}:latest
 	docker tag ${CONTAINER_NAME}:latest ${CONTAINER_NAME}:$(RUST_VERSION)
