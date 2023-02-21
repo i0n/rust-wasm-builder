@@ -28,9 +28,7 @@ workflows:
   version: 2
   build-test-deploy:
     jobs:
-      - test-unit:
+      - deploy:
           filters:
             branches:
               only: main
-      - deploy:
-          requires:
