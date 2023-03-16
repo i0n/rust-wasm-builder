@@ -1,7 +1,7 @@
 SHELL := /bin/bash
 NAME := rust-wasm-builder
 CONTAINER_NAME := i0nw/${NAME}
-RUST_VERSION := 1.67.1
+RUST_VERSION := 1.68
 
 print-version:
 	@echo $(RUST_VERSION)
