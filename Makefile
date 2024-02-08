@@ -1,13 +1,13 @@
 SHELL := /bin/bash
 NAME := rust-wasm-builder
 CONTAINER_NAME := i0nw/${NAME}
-RUST_VERSION := 1.75.0
+RUST_VERSION := 1.76.0
 
 print-version:
 	@echo $(RUST_VERSION)
 
 docker-build:
-	docker build . -t ${CONTAINER_NAME}:latest
+	docker build . --no-cache -t ${CONTAINER_NAME}:latest
 	docker tag ${CONTAINER_NAME}:latest ${CONTAINER_NAME}:$(RUST_VERSION)
 
 docker-push:
