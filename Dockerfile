@@ -1,4 +1,4 @@
-FROM rust:1.76.0 as builder
+FROM rust:1.77.1 as builder
 
 RUN rustup target add wasm32-unknown-unknown
-RUN cargo install wasm-bindgen-cli trunk 
+RUN cargo install trunk
